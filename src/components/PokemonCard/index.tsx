@@ -8,7 +8,7 @@ type Props = {
 }
 
 const PokemonCard = ({name, index}: Props) => {
-  const pokemonIndex = ('00' + (index+1)).slice(-3);
+  const pokemonIndex = index<100 ? ('00' + (index+1)).slice(-3) : index+1;
   return (
     <motion.div
       className='dark:bg-slate-900 rounded p-5 flex flex-col items-center relative bg-gray-300'
@@ -20,6 +20,7 @@ const PokemonCard = ({name, index}: Props) => {
         hidden:{opacity: 0, x:-50},
         visible: {opacity: 1, x:0}
       }}
+      key={index}
     >
       <Image
         className='z-10'

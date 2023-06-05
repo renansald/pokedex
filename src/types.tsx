@@ -5,7 +5,7 @@ export interface Pokemon{
 
 export interface Response {
   count: number,
-  next: string | null,
-  previous: string | null,
+  next?: string,
+  previous?: string,
   results: Pokemon[]
 }

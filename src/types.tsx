@@ -9,3 +9,10 @@ export interface Response {
   previous?: string,
   results: Pokemon[]
 }
+
+export interface Pokemon {
+  id: number,
+  name: string,
+  stats: any[],
+  types: any[],
+}
